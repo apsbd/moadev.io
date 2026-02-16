@@ -139,7 +139,7 @@
         @apply bg-background text-foreground;
     }
     .h1 {
-        @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+        @apply text-[48px] xl:text-[60px] leading-[1.1] font-semibold;
     }
     .h2 {
         @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
