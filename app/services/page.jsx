@@ -55,7 +55,7 @@ const Services = () => {
                         <div key={index} className='flex flex-1 flex-col justify-center gap-6 group'>
                             {/* top */}
                             <div className='w-full flex justify-between items-center'>
-                                <div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500'>{service.num}</div>
+                                <div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-accent group-hover:text-outline-hover transition-all duration-500'>{service.num}</div>
                                 <Link
                                     href={service.href}
                                     className='w-17.5 h-17.5 rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45'>

@@ -6,18 +6,22 @@ import { div } from "three/src/nodes/math/OperatorNode";
 const stats = [
     {
         num: 15,
+        plus: true,
         text: 'Years of Experience'
     },
     {
-        num: 99,
+        num: 50,
+        plus: true,
         text: 'Projects Completed'
     },
     {
         num: 8,
+        plus: false,
         text: 'Technologies Mastered'
     },
     {
         num: 500,
+        plus: true,
         text: 'Code Commits'
     }
 ];
@@ -35,6 +39,7 @@ const Stats = () => {
                             delay={2}
                             className="text-4xl xl:text-6xl font-extrabold"
                         />
+                        {stat.plus && <span className="text-4xl xl:text-6xl font-extrabold">+</span>}
                         <p className={`${stat.text.length > 10 ? 'max-w-25' : 'max-w-37.5'} leading-snug text-white/80`}>{stat.text}</p>
                         </div>
                     ))}
