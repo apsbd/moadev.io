@@ -21,7 +21,7 @@ const services = [
     },
     {
         num: '03',
-        title: 'Web Application Development',
+        title: 'Web Application',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.',
         href: ''

@@ -16,7 +16,7 @@ const stats = [
     },
     {
         num: 8,
-        plus: false,
+        plus: true,
         text: 'Technologies Mastered'
     },
     {

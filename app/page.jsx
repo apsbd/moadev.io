@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
 
@@ -5,6 +7,7 @@ import { FiDownload } from 'react-icons/fi';
 import Socials from '@/components/Socials';
 import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
+import {motion} from 'framer-motion';
 
 
 const Home = () => {
@@ -50,7 +53,10 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <Stats />
+            <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
+            className='container mx-auto px-4 xl:px-0 pb-8'>
+                <Stats />
+            </motion.div>
         </section>
     );
 };

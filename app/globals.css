@@ -110,6 +110,7 @@
   /* --accent: #00ff99; */
   --accent: #00ddff;
 
+
   --accent-foreground: #00e187;
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
@@ -154,5 +155,8 @@
     }
     .text-outline-hover {
         -webkit-text-stroke: 0px #00ff99;
+    }
+    .container {
+        @apply px-4;
     }
 }

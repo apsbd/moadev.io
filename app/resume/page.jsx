@@ -28,6 +28,7 @@ import {
 } from '@/components/ui/tooltip';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { easeIn, motion } from 'framer-motion';
+import { div } from 'three/src/nodes/math/OperatorNode';
 
 // about data
 const about = {
@@ -46,6 +47,20 @@ const about = {
         {
             fieldName: 'Experience',
             fieldValue: '15+ Years'
+        },
+        {
+            fieldName: 'Microsoft Teams',
+            fieldValue: 'mohiuddin.ahmed.07'
+        },
+        {
+            fieldName: 'Nationality',
+            fieldValue: 'Bangladeshi'
+        },
+        { fieldName: 'Email', fieldValue: 'mohiuddin.ahmed@example.com' }
+        ,
+        {
+            fieldName: 'Address',
+            fieldValue: 'Dhaka, Bangladesh'
         },
         {
             fieldName: 'Language',
@@ -177,17 +192,145 @@ const Resume = () => {
             }}
             className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0'>
             <div className='container mx-auto'>
-                <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-15 '>
-                    <TabsList>
-                        <TabsTrigger>Experience</TabsTrigger>
-                        <TabsTrigger>Education</TabsTrigger>
-                        <TabsTrigger>Skills</TabsTrigger>
-                        <TabsTrigger>About Me</TabsTrigger>
+                <Tabs
+                    orientation='vertical'
+                    defaultValue='experience'
+                    className='flex flex-col xl:flex-row gap-15'>
+                    <TabsList className='flex flex-col w-full max-w-95 mx-auto xl:mx-0 gap-6 bg-transparent border-0 rounded-lg mb-10 xl:mb-0'>
+                        <TabsTrigger value='experience'>Experience</TabsTrigger>
+                        <TabsTrigger value='education'>Education</TabsTrigger>
+                        <TabsTrigger value='skills'>Skills</TabsTrigger>
+                        <TabsTrigger value='about'>About Me</TabsTrigger>
                     </TabsList>
-
                     {/* contents */}
-                    <div className='w-full'>
-                        contents
+                    <div className='min-h-[70vh] w-full'>
+                        {/* experience */}
+                        <TabsContent value='experience' className='w-full'>
+                            <div className='flex flex-col gap-7.5 text-center xl:text-left'>
+                                <h3 className='text-4xl font-bold'>
+                                    {experience.title}
+                                </h3>
+                                <p className='max-w-150 text-white/60 mx-auto xl:mx-0'>
+                                    {experience.description}
+                                </p>
+                                <ScrollArea className='h-100'>
+                                    <ul className='grid grid-cols-1 lg:grid-cols-2 gap-7.5'>
+                                        {experience.items.map((item, index) => (
+                                            <li
+                                                key={index}
+                                                className='bg-[#232329] h-46 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start pag-1'>
+                                                <span className='text-accent'>
+                                                    {item.duration}
+                                                </span>
+                                                <h3 className='text-xl max-w-65 min-h-15 text-center lg:text-left'>
+                                                    {item.title}
+                                                </h3>
+                                                <div className='flex items-center gap-3'>
+                                                    <span className='w-1.5 h-1.5 rounded-full bg-accent'></span>
+                                                    <p className='text-white/60'>
+                                                        {item.company}
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </ScrollArea>
+                            </div>
+                        </TabsContent>
+
+                        {/* education */}
+                        <TabsContent value='education' className='w-full'>
+                            <div className='flex flex-col gap-7.5 text-center xl:text-left'>
+                                <h3 className='text-4xl font-bold'>
+                                    {education.title}
+                                </h3>
+                                <p className='max-w-150 text-white/60 mx-auto xl:mx-0'>
+                                    {education.description}
+                                </p>
+                                <ScrollArea className='h-100'>
+                                    <ul className='grid grid-cols-1 lg:grid-cols-2 gap-7.5'>
+                                        {education.items.map((item, index) => (
+                                            <li
+                                                key={index}
+                                                className='bg-[#232329] h-46 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start pag-1'>
+                                                <span className='text-accent'>
+                                                    {item.duration}
+                                                </span>
+                                                <h3 className='text-xl max-w-65 min-h-15 text-center lg:text-left'>
+                                                    {item.degree}
+                                                </h3>
+                                                <div className='flex items-center gap-3'>
+                                                    <span className='w-1.5 h-1.5 rounded-full bg-accent'></span>
+                                                    <p className='text-white/60'>
+                                                        {item.institution}
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </ScrollArea>
+                            </div>
+                        </TabsContent>
+
+                        {/* skills */}
+                        <TabsContent value='skills' className='w-full'>
+                            <div className='flex flex-col gap-7.5 text-center xl:text-left'>
+                                <h3 className='text-4xl font-bold'>
+                                    {skills.title}
+                                </h3>
+                                <p className='max-w-150 text-white/60 mx-auto xl:mx-0'>
+                                    {skills.description}
+                                </p>
+                                <ScrollArea className='h-100 w-full'>
+                                    <ul className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:gap-7.5 gap-4'>
+                                        {skills.items.map((item, index) => (
+                                            <li key={index}>
+                                                <TooltipProvider
+                                                    delayDuration={100}>
+                                                    <Tooltip>
+                                                        <TooltipTrigger className='w-full h-37.5 bg-[#232329] rounded-xl flex items-center justify-center group'>
+                                                            <div className='text-6xl group-hover:text-accent transition-all duration-300'>
+                                                                {item.icon}
+                                                            </div>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent className='capitalize'>
+                                                            {item.name}
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </ScrollArea>
+                            </div>
+                        </TabsContent>
+
+                        {/* about */}
+                        <TabsContent value='about' className='w-full'>
+                            <div className='flex flex-col gap-7.5 text-center xl:text-left'>
+                                <h3 className='text-4xl font-bold'>
+                                    {about.title}
+                                </h3>
+                                <p className='max-w-150 text-white/60 mx-auto xl:mx-0'>
+                                    {about.description}
+                                </p>
+                                <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 mx-auto xl:mx-0'>
+                                    {about.info.map((item, index) => (
+                                        <li
+                                            key={index}
+                                            className='flex items-center gap-3 justify-center xl:justify-start'>
+                                            <span className='w-1.5 h-1.5 rounded-full bg-accent'></span>
+                                            <p className='text-white/60'>
+                                                {item.fieldName}:{' '}
+                                                <span className='text-white'>
+                                                    {item.fieldValue}
+                                                </span>
+                                            </p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </TabsContent>
                     </div>
                 </Tabs>
             </div>
