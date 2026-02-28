@@ -73,7 +73,7 @@ const Work = () => {
 
                             {/* Project Image Placeholder */}
                             <div className='relative h-48 bg-[#1c1c22] overflow-hidden'>
-                                <div className='absolute inset-0 bg-gradient-to-b from-transparent to-[#232329]/90 z-10' />
+                                <div className='absolute inset-0 bg-linear-to-b from-transparent to-[#232329]/90 z-10' />
                                 <div className='w-full h-full flex items-center justify-center text-white/20 text-6xl'>
                                     {/* Placeholder icon if no image */}
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
