@@ -24,9 +24,7 @@ export default function RootLayout({ children }) {
         <html lang='en'>
             <body className={`${jetbrains_Mono.variable} dark`}>
                 <div className='font-primary'>
-                <div className='opacity-25'>
-                    <SplashCursor COLOR={{ r: 0, g: 0.87, b: 1.0 }} />
-                </div>
+                <SplashCursor COLOR={{ r: 0, g: 0.87, b: 1.0 }} />
                     <TooltipProvider>
                         <Header />
                         <StairTransition />
