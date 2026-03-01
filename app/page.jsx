@@ -24,12 +24,10 @@ const Home = () => {
                             <span className='text-accent'>Mohiuddin Ahmed</span>
                         </h1>
                         <p className='max-w-125 mb-9 text-white/80'>
-                            I am a software developer with experience in
-                            building web applications using modern technologies.
-                            I am passionate about learning new technologies and
-                            improving my skills. I am always looking for new
-                            opportunities to grow and develop as a software
-                            developer.
+                            Full-stack developer with 15+ years of experience
+                            building scalable web applications and digital products.
+                            I specialize in React, Next.js, and Node.js, helping
+                            businesses transform ideas into powerful software solutions.
                         </p>
                         {/* buttons & socials */}
                         <div className='flex flex-col xl:flex-row items-center gap-8'>

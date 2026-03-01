@@ -1,7 +1,6 @@
 'use client';
 
 import CountUp from "react-countup";
-import { div } from "three/src/nodes/math/OperatorNode";
 
 const stats = [
     {
@@ -10,19 +9,19 @@ const stats = [
         text: 'Years of Experience'
     },
     {
-        num: 50,
+        num: 100,
         plus: true,
         text: 'Projects Completed'
     },
     {
-        num: 8,
+        num: 14,
         plus: true,
         text: 'Technologies Mastered'
     },
     {
-        num: 500,
+        num: 50,
         plus: true,
-        text: 'Code Commits'
+        text: 'Happy Clients'
     }
 ];
 
