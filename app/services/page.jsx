@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { BsArrowRight, BsCheck, BsClock, BsCode, BsPalette, BsGlobe, BsChat } from 'react-icons/bs';
+import { BsArrowRight, BsCheck, BsCode, BsPalette, BsGlobe, BsChat } from 'react-icons/bs';
 import { FaMugHot } from 'react-icons/fa6';
 import ServiceModal from '@/components/ServiceModal';
 
