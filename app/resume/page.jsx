@@ -35,28 +35,31 @@ const experience = {
     title: 'Experience',
     items: [
         {
-            title: 'Senior Web Developer',
-            company: 'Tech Solutions Inc.',
-            duration: '2018 - Present',
+            title: 'Senior Frontend Developer',
+            company: 'NRB Global Tech Ltd',
+            duration: 'Nov 2022 - Present',
+            location: 'Dhaka, Bangladesh',
             description:
-                'Lead the development of multiple web applications using React and Node.js. Collaborate with cross-functional teams to deliver high-quality products on time. Mentor junior developers and establish coding standards.',
-            technologies: ['React', 'Node.js', 'AWS', 'TypeScript']
+                'Working on enterprise-level web applications using React, Next.js, and TypeScript. Implemented complex UI components and improved application performance by 40%. Led the migration from JavaScript to TypeScript.',
+            technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS']
         },
         {
-            title: 'Web Developer',
-            company: 'Creative Web Agency',
-            duration: '2015 - 2018',
+            title: 'Frontend Developer',
+            company: 'Brain Station 23',
+            duration: 'Mar 2019 - Oct 2022',
+            location: 'Dhaka, Bangladesh',
             description:
-                'Developed responsive websites and web applications for various clients. Worked closely with designers to implement user-friendly interfaces. Optimized performance and accessibility across projects.',
-            technologies: ['JavaScript', 'CSS', 'HTML', 'WordPress']
+                'Developed and maintained multiple client projects using React and Vue.js. Collaborated with design teams to create responsive and accessible web interfaces. Mentored junior developers in best practices.',
+            technologies: ['React', 'Vue.js', 'JavaScript', 'SCSS']
         },
         {
             title: 'Junior Web Developer',
-            company: 'Startup Hub',
-            duration: '2010 - 2015',
+            company: 'Tech Mahindra',
+            duration: 'Jan 2017 - Feb 2019',
+            location: 'Remote',
             description:
-                'Assisted in the development of web applications and maintained existing websites. Gained valuable experience in front-end and back-end development through hands-on projects.',
-            technologies: ['PHP', 'MySQL', 'jQuery', 'Bootstrap']
+                'Built responsive websites and web applications for international clients. Gained expertise in modern JavaScript frameworks and agile methodologies.',
+            technologies: ['JavaScript', 'HTML', 'CSS', 'jQuery']
         }
     ]
 };
@@ -169,7 +172,15 @@ const TimelineItem = ({ item, isExperience }) => {
                 <h3 className="text-xl font-bold mt-1 group-hover:text-accent transition-colors">
                     {isExperience ? item.title : item.degree}
                 </h3>
-                <p className="text-white/60 mt-1">{isExperience ? item.company : item.institution}</p>
+                <div className="flex items-center gap-2 mt-1">
+                    <p className="text-white/60">{isExperience ? item.company : item.institution}</p>
+                    {item.location && (
+                        <>
+                            <span className="text-white/30">•</span>
+                            <p className="text-white/40 text-sm">{item.location}</p>
+                        </>
+                    )}
+                </div>
                 <p className="text-white/80 mt-3 text-sm leading-relaxed">{item.description}</p>
 
                 {technologies && technologies.length > 0 && (
