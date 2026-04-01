@@ -24,10 +24,10 @@ const Home = () => {
                             <span className='text-accent'>Mohiuddin Ahmed</span>
                         </h1>
                         <p className='max-w-125 mb-9 text-white/80'>
-                            Full-stack developer with 15+ years of experience
-                            building scalable web applications and digital products.
-                            I specialize in React, Next.js, and Node.js, helping
-                            businesses transform ideas into powerful software solutions.
+                            Senior System Architect with 15+ years of experience
+                            building production-grade SaaS and AI platforms.
+                            Specialized in multi-tenant architecture, RAG systems,
+                            and scalable application design.
                         </p>
                         {/* buttons & socials */}
                         <div className='flex flex-col xl:flex-row items-center gap-8'>

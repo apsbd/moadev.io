@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-const titles = ['UI/UX Designer', 'Software Developer', 'System Architect'];
+const titles = ['Senior System Architect', 'AI Product Builder', 'Full-Stack Engineer'];
 
 export default function TypingText() {
     const [text, setText] = useState('');

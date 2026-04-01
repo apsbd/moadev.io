@@ -6,12 +6,7 @@ import {
     FaReact,
     FaNodeJs,
     FaDocker,
-    FaDownload,
-    FaGithub,
-    FaEnvelope,
-    FaPhone,
-    FaMapMarkerAlt,
-    FaLinkedin
+    FaDownload
 } from 'react-icons/fa';
 
 import {
@@ -21,19 +16,6 @@ import {
     SiMongodb
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
-
-// hero description
-const heroDescription =
-    'Senior System Architect with 15+ years of experience building production-grade SaaS and AI platforms. Specialized in multi-tenant architecture, RAG systems, and scalable application design, with a strong track record of delivering real-world systems for production use.';
-
-// contact info
-const contactInfo = [
-    { icon: FaEnvelope, label: 'devmoa@proton.me', href: 'mailto:devmoa@proton.me' },
-    { icon: FaPhone, label: '+8801888568593', href: 'tel:+8801888568593' },
-    { icon: FaMapMarkerAlt, label: 'Dhaka, Bangladesh', href: null },
-    { icon: FaGithub, label: 'github.com/apsbd', href: 'https://github.com/apsbd' },
-    { icon: FaLinkedin, label: 'linkedin.com/in/mohiuddin-ahmed-07', href: 'https://linkedin.com/in/mohiuddin-ahmed-07' }
-];
 
 // experience data
 const experience = {
@@ -264,64 +246,6 @@ const Resume = () => {
             <div className="container mx-auto">
                 <div className="px-4 pb-8 space-y-16">
 
-                    {/* Hero Section */}
-                    <motion.section
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate="visible"
-                        className="space-y-6">
-                        <div className="xl:flex xl:items-end xl:justify-between gap-8">
-                            <div className="space-y-3">
-                                <motion.p variants={itemVariants} className="text-accent text-sm font-medium uppercase tracking-widest">
-                                    Resume
-                                </motion.p>
-                                <motion.h1 variants={itemVariants} className="h1">
-                                    Mohiuddin <span className="text-accent">Ahmed</span>
-                                </motion.h1>
-                                <motion.p variants={itemVariants} className="text-white/50 text-lg font-medium">
-                                    Senior System Architect · AI Product Builder · Full-Stack Engineer
-                                </motion.p>
-                            </div>
-
-                            <motion.div
-                                variants={itemVariants}
-                                className="mt-6 xl:mt-0 xl:self-start xl:pt-10">
-                                <a
-                                    href="/assets/resume/resume-of-mohiuddin-ahmed.pdf"
-                                    download
-                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-background font-medium rounded-full hover:bg-accent/90 transition-colors text-sm whitespace-nowrap">
-                                    <FaDownload /> Download Resume
-                                </a>
-                            </motion.div>
-                        </div>
-
-                        <motion.p
-                            variants={itemVariants}
-                            className="text-white/60 max-w-3xl text-base leading-relaxed border-l-2 border-accent/40 pl-4">
-                            {heroDescription}
-                        </motion.p>
-
-                        {/* Contact chips */}
-                        <motion.div variants={itemVariants} className="flex flex-wrap gap-3">
-                            {contactInfo.map((item, i) => {
-                                const Icon = item.icon;
-                                const inner = (
-                                    <span className="flex items-center gap-1.5 text-xs text-white/50 hover:text-white/80 transition-colors">
-                                        <Icon className="text-accent text-sm" />
-                                        {item.label}
-                                    </span>
-                                );
-                                return item.href ? (
-                                    <a key={i} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
-                                        {inner}
-                                    </a>
-                                ) : (
-                                    <span key={i}>{inner}</span>
-                                );
-                            })}
-                        </motion.div>
-                    </motion.section>
-
                     {/* Main Content Grid */}
                     <div className="grid xl:grid-cols-2 gap-12">
 
@@ -459,18 +383,19 @@ const Resume = () => {
                         <motion.h3
                             variants={itemVariants}
                             className="text-2xl font-semibold mb-4">
-                            Interested in working together?
+                            Want a copy of my resume?
                         </motion.h3>
                         <motion.p
                             variants={itemVariants}
                             className="text-white/60 mb-6 max-w-md mx-auto">
-                            I'm open to discussing new projects, system architecture challenges, or AI product opportunities.
+                            Download the PDF version to share or keep for reference.
                         </motion.p>
                         <motion.a
                             variants={itemVariants}
-                            href="/contact"
+                            href="/assets/resume/resume-of-mohiuddin-ahmed.pdf"
+                            download
                             className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-background font-medium rounded-full hover:bg-accent/90 transition-all hover:scale-105">
-                            <FaEnvelope /> Get in Touch
+                            <FaDownload /> Download Resume
                         </motion.a>
                     </motion.section>
 
