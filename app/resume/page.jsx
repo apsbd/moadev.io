@@ -1,65 +1,81 @@
 'use client';
 
 import {
-    FaHtml5,
-    FaCss3,
-    FaJs,
+    FaAws,
+    FaLaravel,
     FaReact,
     FaNodeJs,
-    FaFigma,
-    FaAws,
-    FaDigitalOcean,
-    FaLaravel,
-    FaGithub,
+    FaDocker,
+    FaDownload,
     FaLinkedin,
-    FaDownload
+    FaGithub,
+    FaEnvelope,
+    FaPhone,
+    FaMapMarkerAlt
 } from 'react-icons/fa';
 
 import {
-    SiTailwindcss,
-    SiShadcnui,
     SiNextdotjs,
-    SiN8N,
-    SiKubernetes,
-    SiTypescript,
-    SiMongodb,
-    SiPostgresql
+    SiPostgresql,
+    SiRedis,
+    SiMongodb
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
 // hero description
-const heroDescription = 'I am a passionate web developer with expertise in HTML, CSS, JavaScript, React, Node.js, and more. I have a strong background in building responsive and user-friendly web applications. I am always eager to learn new technologies and stay updated with the latest trends in web development.';
+const heroDescription =
+    'Senior System Architect with 15+ years of experience building production-grade SaaS and AI platforms. Specialized in multi-tenant architecture, RAG systems, and scalable application design, with a strong track record of delivering real-world systems for production use.';
+
+// contact info
+const contactInfo = [
+    { icon: FaEnvelope, label: 'devmoa@proton.me', href: 'mailto:devmoa@proton.me' },
+    { icon: FaPhone, label: '+8801888568593', href: 'tel:+8801888568593' },
+    { icon: FaMapMarkerAlt, label: 'Dhaka, Bangladesh', href: null },
+    { icon: FaGithub, label: 'github.com/apsbd', href: 'https://github.com/apsbd' },
+    { icon: FaLinkedin, label: 'linkedin.com/in/mohiuddin-ahmed-07', href: 'https://linkedin.com/in/mohiuddin-ahmed-07' }
+];
 
 // experience data
 const experience = {
     title: 'Experience',
     items: [
         {
-            title: 'Senior Frontend Developer',
-            company: 'NRB Global Tech Ltd',
-            duration: 'Nov 2022 - Present',
-            location: 'Dhaka, Bangladesh',
-            description:
-                'Working on enterprise-level web applications using React, Next.js, and TypeScript. Implemented complex UI components and improved application performance by 40%. Led the migration from JavaScript to TypeScript.',
-            technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS']
+            title: 'Sr. System Architect',
+            company: 'Tiered Communication Services, Inc',
+            duration: '06/2020 – Present',
+            location: 'Texas, USA',
+            description: null,
+            bullets: [
+                'Built Utilen, a multi-tenant AI SaaS with RAG-based knowledge system and workspace-level data isolation, supporting multiple organizations and scalable knowledge retrieval',
+                'Designed scalable architecture for large datasets and real-time query processing with optimized performance and low latency',
+                'Developed a social media and video streaming platform supporting web and mobile users with Laravel backend, React frontend, and React Native apps',
+                'Contributed to Heartland Cyber Range, a Kansas government project for cybersecurity training, simulating real-world systems and attack scenarios'
+            ],
+            technologies: ['Laravel', 'React', 'Qdrant', 'OpenAI', 'AWS S3', 'React Native']
         },
         {
-            title: 'Frontend Developer',
-            company: 'Brain Station 23',
-            duration: 'Mar 2019 - Oct 2022',
+            title: 'Adjunct Lecturer',
+            company: 'Eastern University, Bangladesh',
+            duration: '03/2025 – Present',
             location: 'Dhaka, Bangladesh',
-            description:
-                'Developed and maintained multiple client projects using React and Vue.js. Collaborated with design teams to create responsive and accessible web interfaces. Mentored junior developers in best practices.',
-            technologies: ['React', 'Vue.js', 'JavaScript', 'SCSS']
+            description: null,
+            bullets: [
+                'Teach software engineering with focus on real-world system design, scalable architecture, and AI-driven applications',
+                'Mentor students in building production-level projects and applying academic concepts in practical environments'
+            ],
+            technologies: ['System Design', 'AI Applications', 'Software Engineering']
         },
         {
-            title: 'Junior Web Developer',
-            company: 'Tech Mahindra',
-            duration: 'Jan 2017 - Feb 2019',
-            location: 'Remote',
-            description:
-                'Built responsive websites and web applications for international clients. Gained expertise in modern JavaScript frameworks and agile methodologies.',
-            technologies: ['JavaScript', 'HTML', 'CSS', 'jQuery']
+            title: 'Sr. Software Engineer & CTO',
+            company: 'Of Eleven Media',
+            duration: '02/2014 – 01/2020',
+            location: 'USA',
+            description: null,
+            bullets: [
+                'Developed and maintained DataMine SaaS platform used for data-driven workflows, ensuring system stability and continuous feature delivery',
+                'Improved system reliability and performance by resolving critical issues and optimizing backend services'
+            ],
+            technologies: ['Laravel', 'MySQL', 'MongoDB', 'Node.js', 'Stripe']
         }
     ]
 };
@@ -69,72 +85,61 @@ const education = {
     title: 'Education',
     items: [
         {
-            degree: 'Bachelor of Science in Computer Science',
-            institution: 'XYZ University',
-            duration: '2006 - 2010',
-            description:
-                'Graduated with honors. Completed coursework in web development, database management, and software engineering.',
-            achievements: ['Dean\'s List', 'GPA: 3.8/4.0']
+            degree: 'B.Sc. in Computer Science & Engineering',
+            institution: 'Eastern University of Bangladesh',
+            duration: '03/2010 – 11/2013',
+            description: 'Studied core disciplines in computer science, software engineering, and systems design.',
+            achievements: []
         }
     ]
 };
 
-// skills data - organized by category
+// skills data
 const skillsData = {
     categories: [
         {
-            name: 'Frontend',
+            name: 'Architecture & Systems',
             skills: [
-                { name: 'HTML5', icon: FaHtml5, level: 95 },
-                { name: 'CSS3', icon: FaCss3, level: 90 },
-                { name: 'JavaScript', icon: FaJs, level: 95 },
-                { name: 'TypeScript', icon: SiTypescript, level: 85 },
-                { name: 'React', icon: FaReact, level: 90 },
-                { name: 'Next.js', icon: SiNextdotjs, level: 85 }
+                { name: 'System Architecture', level: 97 },
+                { name: 'Multi-Tenant SaaS', level: 95 },
+                { name: 'AI / RAG Systems', level: 92 },
+                { name: 'Distributed Systems', level: 90 }
             ]
         },
         {
-            name: 'Backend',
+            name: 'Backend & Frameworks',
             skills: [
-                { name: 'Node.js', icon: FaNodeJs, level: 85 },
-                { name: 'Laravel', icon: FaLaravel, level: 75 }
+                { name: 'Laravel', icon: FaLaravel, level: 95 },
+                { name: 'Node.js', icon: FaNodeJs, level: 88 },
+                { name: 'Next.js', icon: SiNextdotjs, level: 85 },
+                { name: 'React', icon: FaReact, level: 88 }
             ]
         },
         {
-            name: 'Styling',
+            name: 'Data & Infrastructure',
             skills: [
-                { name: 'Tailwind CSS', icon: SiTailwindcss, level: 90 },
-                { name: 'Shadcn UI', icon: SiShadcnui, level: 85 }
-            ]
-        },
-        {
-            name: 'Cloud & DevOps',
-            skills: [
-                { name: 'AWS', icon: FaAws, level: 75 },
-                { name: 'DigitalOcean', icon: FaDigitalOcean, level: 80 },
-                { name: 'Kubernetes', icon: SiKubernetes, level: 65 },
-                { name: 'n8n', icon: SiN8N, level: 70 }
-            ]
-        },
-        {
-            name: 'Design & Tools',
-            skills: [
-                { name: 'Figma', icon: FaFigma, level: 80 },
-                { name: 'MongoDB', icon: SiMongodb, level: 75 },
-                { name: 'PostgreSQL', icon: SiPostgresql, level: 70 }
+                { name: 'PostgreSQL', icon: SiPostgresql, level: 88 },
+                { name: 'Redis', icon: SiRedis, level: 85 },
+                { name: 'MongoDB', icon: SiMongodb, level: 80 },
+                { name: 'Docker', icon: FaDocker, level: 85 },
+                { name: 'AWS', icon: FaAws, level: 82 }
             ]
         }
     ]
 };
+
+// languages
+const languages = [
+    { name: 'Bangla', level: 'Native', percent: 100 },
+    { name: 'English', level: 'Professional Working', percent: 85 }
+];
 
 // Animation variants
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
-        transition: {
-            staggerChildren: 0.1
-        }
+        transition: { staggerChildren: 0.1 }
     }
 };
 
@@ -181,7 +186,21 @@ const TimelineItem = ({ item, isExperience }) => {
                         </>
                     )}
                 </div>
-                <p className="text-white/80 mt-3 text-sm leading-relaxed">{item.description}</p>
+
+                {item.description && (
+                    <p className="text-white/80 mt-3 text-sm leading-relaxed">{item.description}</p>
+                )}
+
+                {item.bullets && item.bullets.length > 0 && (
+                    <ul className="mt-3 space-y-2">
+                        {item.bullets.map((bullet, i) => (
+                            <li key={i} className="flex gap-2 text-sm text-white/70 leading-relaxed">
+                                <span className="text-accent mt-1 shrink-0">▸</span>
+                                <span>{bullet}</span>
+                            </li>
+                        ))}
+                    </ul>
+                )}
 
                 {technologies && technologies.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-4">
@@ -206,21 +225,27 @@ const SkillBar = ({ skill, index }) => {
         <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.5, delay: index * 0.08 }}
             viewport={{ once: true }}
             className="group">
             <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                    <Icon className="text-xl text-accent" />
-                </div>
-                <span className="font-medium">{skill.name}</span>
-                <span className="ml-auto text-white/60 text-sm">{skill.level}%</span>
+                {Icon ? (
+                    <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors shrink-0">
+                        <Icon className="text-base text-accent" />
+                    </div>
+                ) : (
+                    <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors shrink-0">
+                        <span className="text-accent text-xs font-bold">{skill.name.slice(0, 2).toUpperCase()}</span>
+                    </div>
+                )}
+                <span className="font-medium text-sm">{skill.name}</span>
+                <span className="ml-auto text-white/50 text-xs">{skill.level}%</span>
             </div>
-            <div className="h-2 bg-white/5 rounded-full overflow-hidden">
+            <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
                 <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1, delay: index * 0.1 }}
+                    transition={{ duration: 1, delay: index * 0.08 }}
                     viewport={{ once: true }}
                     className="h-full bg-gradient-to-r from-accent to-accent/60 rounded-full"
                 />
@@ -239,158 +264,223 @@ const Resume = () => {
             <div className="container mx-auto">
                 <div className="px-4 pb-8 space-y-16">
 
-                        {/* Hero Section */}
-                        <motion.section
-                            variants={containerVariants}
-                            initial="hidden"
-                            animate="visible"
-                            className="text-center space-y-6">
-                            <motion.h1
-                                variants={itemVariants}
-                                className="h1">
-                                My <span className="text-accent">Resume</span>
-                            </motion.h1>
-                            <motion.p
-                                variants={itemVariants}
-                                className="text-white/60 max-w-2xl mx-auto text-lg">
-                                {heroDescription}
-                            </motion.p>
+                    {/* Hero Section */}
+                    <motion.section
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="space-y-6">
+                        <div className="xl:flex xl:items-end xl:justify-between gap-8">
+                            <div className="space-y-3">
+                                <motion.p variants={itemVariants} className="text-accent text-sm font-medium uppercase tracking-widest">
+                                    Resume
+                                </motion.p>
+                                <motion.h1 variants={itemVariants} className="h1">
+                                    Mohiuddin <span className="text-accent">Ahmed</span>
+                                </motion.h1>
+                                <motion.p variants={itemVariants} className="text-white/50 text-lg font-medium">
+                                    Senior System Architect · AI Product Builder · Full-Stack Engineer
+                                </motion.p>
+                            </div>
+
                             <motion.div
                                 variants={itemVariants}
-                                className="flex justify-center gap-4 flex-wrap">
+                                className="flex flex-wrap gap-3 mt-6 xl:mt-0 xl:justify-end">
                                 <a
-                                    href="#"
-                                    className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-background font-medium rounded-full hover:bg-accent/90 transition-colors">
-                                    <FaDownload /> Download CV
+                                    href="mailto:devmoa@proton.me"
+                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-background font-medium rounded-full hover:bg-accent/90 transition-colors text-sm">
+                                    <FaEnvelope /> Hire Me
                                 </a>
                                 <a
-                                    href="#"
-                                    className="inline-flex items-center gap-2 px-6 py-3 border border-accent/50 text-accent rounded-full hover:bg-accent/10 transition-colors">
+                                    href="https://linkedin.com/in/mohiuddin-ahmed-07"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="inline-flex items-center gap-2 px-5 py-2.5 border border-accent/50 text-accent rounded-full hover:bg-accent/10 transition-colors text-sm">
                                     <FaLinkedin /> LinkedIn
                                 </a>
                             </motion.div>
-                        </motion.section>
-
-                        {/* Main Content Grid */}
-                        <div className="grid xl:grid-cols-2 gap-12">
-
-                            {/* Experience & Education Column */}
-                            <motion.div
-                                variants={containerVariants}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                className="space-y-12">
-
-                                {/* Experience Section */}
-                                <section>
-                                    <motion.h2
-                                        variants={itemVariants}
-                                        className="text-xl font-semibold mb-6 flex items-center gap-2">
-                                        <span className="w-6 h-0.5 bg-accent rounded-full" />
-                                        Experience
-                                    </motion.h2>
-                                    <div className="space-y-2">
-                                        {experience.items.map((item, index) => (
-                                            <TimelineItem
-                                                key={index}
-                                                item={item}
-                                                index={index}
-                                                isExperience={true}
-                                            />
-                                        ))}
-                                    </div>
-                                </section>
-
-                                {/* Education Section */}
-                                <section>
-                                    <motion.h2
-                                        variants={itemVariants}
-                                        className="text-xl font-semibold mb-6 flex items-center gap-2">
-                                        <span className="w-6 h-0.5 bg-accent rounded-full" />
-                                        Education
-                                    </motion.h2>
-                                    <div className="space-y-2">
-                                        {education.items.map((item, index) => (
-                                            <TimelineItem
-                                                key={index}
-                                                item={item}
-                                                index={index}
-                                                isExperience={false}
-                                            />
-                                        ))}
-                                    </div>
-                                </section>
-                            </motion.div>
-
-                            {/* Skills & About Column */}
-                            <motion.div
-                                variants={containerVariants}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                className="space-y-12">
-
-                                {/* Skills Section */}
-                                <section>
-                                    <motion.h2
-                                        variants={itemVariants}
-                                        className="text-xl font-semibold mb-6 flex items-center gap-2">
-                                        <span className="w-6 h-0.5 bg-accent rounded-full" />
-                                        Skills
-                                    </motion.h2>
-                                    <div className="space-y-8">
-                                        {skillsData.categories.map((category, catIndex) => (
-                                            <motion.div
-                                                key={catIndex}
-                                                variants={itemVariants}
-                                                className="space-y-4">
-                                                <h3 className="text-sm uppercase tracking-wider text-white/50 font-medium">
-                                                    {category.name}
-                                                </h3>
-                                                <div className="grid gap-4">
-                                                    {category.skills.map((skill, skillIndex) => (
-                                                        <SkillBar
-                                                            key={skillIndex}
-                                                            skill={skill}
-                                                            index={skillIndex}
-                                                        />
-                                                    ))}
-                                                </div>
-                                            </motion.div>
-                                        ))}
-                                    </div>
-                                </section>
-
-                            </motion.div>
                         </div>
 
-                        {/* Footer CTA */}
-                        <motion.section
+                        <motion.p
+                            variants={itemVariants}
+                            className="text-white/60 max-w-3xl text-base leading-relaxed border-l-2 border-accent/40 pl-4">
+                            {heroDescription}
+                        </motion.p>
+
+                        {/* Contact chips */}
+                        <motion.div variants={itemVariants} className="flex flex-wrap gap-3">
+                            {contactInfo.map((item, i) => {
+                                const Icon = item.icon;
+                                const inner = (
+                                    <span className="flex items-center gap-1.5 text-xs text-white/50 hover:text-white/80 transition-colors">
+                                        <Icon className="text-accent text-sm" />
+                                        {item.label}
+                                    </span>
+                                );
+                                return item.href ? (
+                                    <a key={i} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
+                                        {inner}
+                                    </a>
+                                ) : (
+                                    <span key={i}>{inner}</span>
+                                );
+                            })}
+                        </motion.div>
+                    </motion.section>
+
+                    {/* Main Content Grid */}
+                    <div className="grid xl:grid-cols-2 gap-12">
+
+                        {/* Experience & Education Column */}
+                        <motion.div
                             variants={containerVariants}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
-                            className="text-center pt-8 border-t border-white/10">
-                            <motion.h3
-                                variants={itemVariants}
-                                className="text-2xl font-semibold mb-4">
-                                Interested in working together?
-                            </motion.h3>
-                            <motion.p
-                                variants={itemVariants}
-                                className="text-white/60 mb-6 max-w-md mx-auto">
-                                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-                            </motion.p>
-                            <motion.a
-                                variants={itemVariants}
-                                href="/contact"
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-background font-medium rounded-full hover:bg-accent/90 transition-all hover:scale-105">
-                                <FaGithub /> Get in Touch
-                            </motion.a>
-                        </motion.section>
+                            className="space-y-12">
 
-                        </div>
+                            {/* Experience Section */}
+                            <section>
+                                <motion.h2
+                                    variants={itemVariants}
+                                    className="text-xl font-semibold mb-8 flex items-center gap-2">
+                                    <span className="w-6 h-0.5 bg-accent rounded-full" />
+                                    Work Experience
+                                </motion.h2>
+                                <div className="space-y-2">
+                                    {experience.items.map((item, index) => (
+                                        <TimelineItem
+                                            key={index}
+                                            item={item}
+                                            index={index}
+                                            isExperience={true}
+                                        />
+                                    ))}
+                                </div>
+                            </section>
+
+                            {/* Education Section */}
+                            <section>
+                                <motion.h2
+                                    variants={itemVariants}
+                                    className="text-xl font-semibold mb-8 flex items-center gap-2">
+                                    <span className="w-6 h-0.5 bg-accent rounded-full" />
+                                    Education
+                                </motion.h2>
+                                <div className="space-y-2">
+                                    {education.items.map((item, index) => (
+                                        <TimelineItem
+                                            key={index}
+                                            item={item}
+                                            index={index}
+                                            isExperience={false}
+                                        />
+                                    ))}
+                                </div>
+                            </section>
+
+                            {/* Languages Section */}
+                            <section>
+                                <motion.h2
+                                    variants={itemVariants}
+                                    className="text-xl font-semibold mb-8 flex items-center gap-2">
+                                    <span className="w-6 h-0.5 bg-accent rounded-full" />
+                                    Languages
+                                </motion.h2>
+                                <div className="space-y-5">
+                                    {languages.map((lang, i) => (
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                                            viewport={{ once: true }}>
+                                            <div className="flex justify-between mb-1.5">
+                                                <span className="font-medium text-sm">{lang.name}</span>
+                                                <span className="text-white/50 text-xs">{lang.level}</span>
+                                            </div>
+                                            <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                                <motion.div
+                                                    initial={{ width: 0 }}
+                                                    whileInView={{ width: `${lang.percent}%` }}
+                                                    transition={{ duration: 1, delay: i * 0.1 }}
+                                                    viewport={{ once: true }}
+                                                    className="h-full bg-gradient-to-r from-accent to-accent/60 rounded-full"
+                                                />
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </section>
+                        </motion.div>
+
+                        {/* Skills Column */}
+                        <motion.div
+                            variants={containerVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            className="space-y-12">
+
+                            <section>
+                                <motion.h2
+                                    variants={itemVariants}
+                                    className="text-xl font-semibold mb-8 flex items-center gap-2">
+                                    <span className="w-6 h-0.5 bg-accent rounded-full" />
+                                    Skills
+                                </motion.h2>
+                                <div className="space-y-10">
+                                    {skillsData.categories.map((category, catIndex) => (
+                                        <motion.div
+                                            key={catIndex}
+                                            variants={itemVariants}
+                                            className="space-y-4">
+                                            <h3 className="text-xs uppercase tracking-widest text-white/40 font-medium">
+                                                {category.name}
+                                            </h3>
+                                            <div className="grid gap-4">
+                                                {category.skills.map((skill, skillIndex) => (
+                                                    <SkillBar
+                                                        key={skillIndex}
+                                                        skill={skill}
+                                                        index={skillIndex}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </section>
+
+                        </motion.div>
+                    </div>
+
+                    {/* Footer CTA */}
+                    <motion.section
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="text-center pt-8 border-t border-white/10">
+                        <motion.h3
+                            variants={itemVariants}
+                            className="text-2xl font-semibold mb-4">
+                            Interested in working together?
+                        </motion.h3>
+                        <motion.p
+                            variants={itemVariants}
+                            className="text-white/60 mb-6 max-w-md mx-auto">
+                            I'm open to discussing new projects, system architecture challenges, or AI product opportunities.
+                        </motion.p>
+                        <motion.a
+                            variants={itemVariants}
+                            href="/contact"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-background font-medium rounded-full hover:bg-accent/90 transition-all hover:scale-105">
+                            <FaEnvelope /> Get in Touch
+                        </motion.a>
+                    </motion.section>
+
+                </div>
             </div>
         </motion.div>
     );
