@@ -3,7 +3,6 @@ import React from 'react';
 
 // Components
 import { Nav } from './Nav';
-import { Button } from './ui/button';
 import MobileNav from './MobileNav';
 
 export default function Header() {
@@ -17,12 +16,9 @@ export default function Header() {
                     </h1>
                 </Link>
 
-                {/* desktop nav & hire me button  */}
+                {/* desktop nav */}
                 <div className="hidden xl:flex items-center gap-8">
                     <Nav />
-                    <Link href='/contact'>
-                        <Button variant="default">Hire Me</Button>
-                    </Link>
                 </div>
 
                 {/* mobile nav */}
