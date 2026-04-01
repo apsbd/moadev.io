@@ -15,8 +15,8 @@ const jetbrains_Mono = JetBrains_Mono({
 });
 
 export const metadata = {
-    title: 'Mohiuddin Ahmed - Software Developer',
-    description: 'I am a software developer with experience in building web applications using modern technologies. I am passionate about learning new technologies and improving my skills. I am always looking for new opportunities to grow and develop as a software developer.'
+    title: 'Mohiuddin Ahmed - Senior System Architect',
+    description: 'I am a senior system architect with experience in designing and implementing scalable software solutions. I am passionate about system design and architecture, and I continuously strive to improve my skills in this field.'
 };
 
 export default function RootLayout({ children }) {
