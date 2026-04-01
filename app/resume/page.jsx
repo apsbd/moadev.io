@@ -7,11 +7,11 @@ import {
     FaNodeJs,
     FaDocker,
     FaDownload,
-    FaLinkedin,
     FaGithub,
     FaEnvelope,
     FaPhone,
-    FaMapMarkerAlt
+    FaMapMarkerAlt,
+    FaLinkedin
 } from 'react-icons/fa';
 
 import {
@@ -260,7 +260,7 @@ const Resume = () => {
             initial="hidden"
             animate="visible"
             variants={fadeInVariants}
-            className="min-h-[80vh] py-12 xl:py-24">
+            className="min-h-[80vh] pt-4 pb-12 xl:pt-6 xl:pb-24">
             <div className="container mx-auto">
                 <div className="px-4 pb-8 space-y-16">
 
@@ -285,18 +285,12 @@ const Resume = () => {
 
                             <motion.div
                                 variants={itemVariants}
-                                className="flex flex-wrap gap-3 mt-6 xl:mt-0 xl:justify-end">
+                                className="mt-6 xl:mt-0 xl:self-start xl:pt-10">
                                 <a
-                                    href="mailto:devmoa@proton.me"
-                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-background font-medium rounded-full hover:bg-accent/90 transition-colors text-sm">
-                                    <FaEnvelope /> Hire Me
-                                </a>
-                                <a
-                                    href="https://linkedin.com/in/mohiuddin-ahmed-07"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="inline-flex items-center gap-2 px-5 py-2.5 border border-accent/50 text-accent rounded-full hover:bg-accent/10 transition-colors text-sm">
-                                    <FaLinkedin /> LinkedIn
+                                    href="/assets/resume/resume-of-mohiuddin-ahmed.pdf"
+                                    download
+                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-background font-medium rounded-full hover:bg-accent/90 transition-colors text-sm whitespace-nowrap">
+                                    <FaDownload /> Download Resume
                                 </a>
                             </motion.div>
                         </div>
