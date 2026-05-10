@@ -31,7 +31,7 @@ const Home = () => {
                         {/* buttons & socials */}
                         <div className='flex flex-col xl:flex-row items-center gap-8'>
                             <a
-                                href='/assets/resume/resume-of-mohiuddin-ahmed.pdf'
+                                href='/assets/resume/resume-of-mohiuddin-ahmed-v2.pdf'
                                 download
                                 className='uppercase flex items-center gap-2 px-6 py-3 border border-accent text-accent rounded-full font-semibold hover:bg-accent hover:text-background transition-all duration-300 text-sm'>
                                 <FaDownload className='text-base' />

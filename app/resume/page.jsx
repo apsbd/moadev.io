@@ -28,10 +28,10 @@ const experience = {
             location: 'Texas, USA',
             description: null,
             bullets: [
-                'Built Utilen, a multi-tenant AI SaaS with RAG-based knowledge system and workspace-level data isolation, supporting multiple organizations and scalable knowledge retrieval',
-                'Designed scalable architecture for large datasets and real-time query processing with optimized performance and low latency',
-                'Developed a social media and video streaming platform supporting web and mobile users with Laravel backend, React frontend, and React Native apps',
-                'Contributed to Heartland Cyber Range, a Kansas government project for cybersecurity training, simulating real-world systems and attack scenarios'
+                'Architected Utilen, a high-performance multi-tenant AI SaaS, implementing a RAG-based knowledge system with Qdrant and AWS S3 that achieved workspace-level data isolation for enterprise clients',
+                'Optimized real-time query processing and distributed system architecture, reducing retrieval latency for large-scale datasets while maintaining high availability',
+                'Spearheaded the development of a social media and video streaming ecosystem across Web, iOS, and Android, managing the full-stack lifecycle using Laravel, React, and React Native',
+                'Engineered secure simulations for the Heartland Cyber Range, providing critical cybersecurity training infrastructure for the Kansas government'
             ],
             technologies: ['Laravel', 'React', 'Qdrant', 'OpenAI', 'AWS S3', 'React Native']
         },
@@ -54,10 +54,10 @@ const experience = {
             location: 'USA',
             description: null,
             bullets: [
-                'Developed and maintained DataMine SaaS platform used for data-driven workflows, ensuring system stability and continuous feature delivery',
-                'Improved system reliability and performance by resolving critical issues and optimizing backend services'
+                'Directed the technical roadmap and architectural overhaul of the DataMine SaaS platform, ensuring 99.9% system uptime and continuous feature delivery for data-driven workflows',
+                'Re-engineered backend services using a polyglot persistence layer (MySQL, MongoDB, Redis), which significantly improved system reliability and database performance during peak loads'
             ],
-            technologies: ['Laravel', 'MySQL', 'MongoDB', 'Node.js', 'Stripe']
+            technologies: ['Laravel', 'MySQL', 'MongoDB', 'Redis', 'Node.js']
         }
     ]
 };
@@ -113,7 +113,7 @@ const skillsData = {
 // languages
 const languages = [
     { name: 'Bangla', level: 'Native', percent: 100 },
-    { name: 'English', level: 'Professional Working', percent: 85 }
+    { name: 'English', level: 'Full Professional Proficiency', percent: 90 }
 ];
 
 // Animation variants
@@ -392,7 +392,7 @@ const Resume = () => {
                         </motion.p>
                         <motion.a
                             variants={itemVariants}
-                            href="/assets/resume/resume-of-mohiuddin-ahmed.pdf"
+                            href="/assets/resume/resume-of-mohiuddin-ahmed-v2.pdf"
                             download
                             className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-background font-medium rounded-full hover:bg-accent/90 transition-all hover:scale-105">
                             <FaDownload /> Download Resume

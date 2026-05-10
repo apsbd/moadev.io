@@ -18,8 +18,8 @@ npx shadcn add <component>  # Add shadcn/ui components
 
 ### Routing & Pages
 - `app/` — App Router pages (layout.jsx, page.jsx per route)
-- Routes: `/` (home), `/work`, `/services`, `/resume`, `/contact`
-- Root layout (`app/layout.jsx`) loads JetBrains Mono font, wraps everything in `TooltipProvider`, and mounts global components: `Header`, `PageTransition`, `SplashCursor`
+- Active routes (linked in nav): `/` (home), `/resume`, `/contact` — `/work` and `/services` pages exist but their nav links are commented out
+- Root layout (`app/layout.jsx`) loads JetBrains Mono font, wraps everything in `TooltipProvider`, and mounts global components: `Header`, `StairTransition`, `PageTransition`, `SplashCursor`
 
 ### Component Organization
 - `components/ui/` — shadcn/ui primitives (Button, Input, Tabs, etc.)
@@ -28,9 +28,11 @@ npx shadcn add <component>  # Add shadcn/ui components
 
 ### Styling
 - Tailwind CSS v4 configured via PostCSS (`@tailwindcss/postcss`)
-- CSS variables for theming defined in `app/globals.css` (OkLCH color space, dark mode via `.dark` class)
+- CSS variables for theming defined in `app/globals.css` (OkLCH color space); the site is always dark — `<body>` hardcodes `class="dark"`, no light/dark toggle
+- Key brand color: `--accent: #00ddff` (cyan), used pervasively via `text-accent`, `bg-accent`, `border-accent`
 - shadcn config in `components.json`: New York style, slate base color, RSC enabled, no TypeScript (`.jsx` files)
 - Custom breakpoints: sm(640px), md(786px), lg(960px), xl(1200px)
+- Typography utilities `.h1`, `.h2`, `.h3` and `.font-primary` (JetBrains Mono) are defined in `globals.css` `@layer base`
 
 ### Animation Patterns
 - **Framer Motion** for all animations: page transitions, entrance animations, stair effects, modals
@@ -43,3 +45,5 @@ npx shadcn add <component>  # Add shadcn/ui components
 - Modals (`ProjectModal.jsx`, `ServiceModal.jsx`) receive data as props and handle their own animation state
 - Stats use `react-countup` for number entrance animations
 - React Compiler is enabled (`reactCompiler: true` in `next.config.mjs`)
+- All content (resume experience/education/skills, stats numbers, social links) is hardcoded as JS objects at the top of each component file — there is no CMS or separate data layer
+- Resume PDF lives at `public/assets/resume/resume-of-mohiuddin-ahmed.pdf`; a v2 variant exists at the same path with `-v2` suffix
